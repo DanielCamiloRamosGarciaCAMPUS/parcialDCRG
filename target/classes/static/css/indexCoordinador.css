@@ -1,0 +1,134 @@
+        /* Estilos Generales */
+        body {
+           
+              font-family: "Exo 2", sans-serif;
+			  font-weight: 535;
+		  font-style: normal;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Contenedor Principal */
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 90%;
+            /* Cambiado para mayor responsividad */
+            width: 600px;
+        }
+
+        /* Estilo del título */
+        .title h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #444;
+            margin-bottom: 15px;
+        }
+
+        .title h2 {
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        /* Estilos del menú de botones */
+        .btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            /* Permite que los botones se ajusten */
+            justify-content: center;
+            /* Centra los botones */
+            margin-top: 30px;
+        }
+
+        .btn-container a {
+            background: linear-gradient(135deg, #ff6b6b, #f0e130);
+            color: white;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 10px;
+            /* Espaciado entre botones */
+        }
+
+        .btn-container a:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilo de íconos */
+        .btn-container i {
+            font-size: 3rem;
+        }
+
+        /* Navegación superior */
+        nav {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            /* Espaciado horizontal reducido */
+        }
+
+        nav .nav-logo img {
+            width: 120px;
+        }
+
+        nav .nav-links a {
+            font-size: 1rem;
+            /* Tamaño de fuente ajustado */
+            color: #fff;
+            background-color: #ff6b6b;
+            padding: 10px 15px;
+            /* Espaciado ajustado */
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        nav .nav-links a:hover {
+            background-color: #f94a4a;
+        }
+
+        /* Media queries para móviles */
+        @media screen and (max-width: 576px) {
+            .title h1 {
+                font-size: 2rem;
+                /* Ajustar tamaño en móviles */
+            }
+
+            .title h2 {
+                font-size: 1rem;
+                /* Ajustar tamaño en móviles */
+            }
+
+            .btn-container a {
+                width: 80px;
+                /* Ajustar tamaño en móviles */
+                height: 80px;
+                /* Ajustar tamaño en móviles */
+                font-size: 2rem;
+                /* Ajustar tamaño en móviles */
+            }
+            
+            nav .nav-links a {
+                font-size: 0.9rem;
+                /* Ajustar tamaño de fuente en móviles */
+            }
+        }

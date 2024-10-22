@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado Total</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/a/a2/Icfes_logo_2022.png" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="static/css/estudianteResultadoTotal.css"
+		     th:href="@{/css/estudianteResultadoTotal.css}">
+			 <link rel="preconnect" href="https://fonts.googleapis.com">
+			 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			 <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,535;1,535&family=Fjalla+One&family=Signika:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" th:href="@{/estudiante/index}">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Icfes_Colombia_logo.svg/640px-Icfes_Colombia_logo.svg.png" alt="Logo" style="width: 150px;">
+        </a>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="centered-container">
+            <div class="result-card">
+                <h2>TOTAL</h2>
+                <div class="info nivel-color-1">
+                    <h3 th:text="${totalLevel}" class="level">Nivel 1</h3>
+                </div>
+                <div class="divider"></div>
+                <div class="puntaje">
+                    <h3>Puntaje</h3>
+                    <p id="puntaje" th:text="${total}">100</p> 
+                </div>
+                <div id="resultadoEstado" class="resultado-estado"></div> 
+                <div class="back-container">
+                    <a th:href="@{/estudiante/index}" class="btn btn-back">Atrás</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © 2024 Sistema de Resultados Pruebas Saber Pro y TyT
+    </footer>
+
+    <!-- jQuery y Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Script para asignar colores de fondo dependiendo del nivel -->
+    <script>
+        // Obtener el puntaje
+        const puntajeElement = document.getElementById('puntaje');
+        const puntaje = parseFloat(puntajeElement.textContent.trim());
+
+        // Verificar si el puntaje es menor a 120
+        if (puntaje < 120) {
+            puntajeElement.style.color = 'red'; // Cambiar el color del puntaje a rojo
+            const resultadoEstado = document.getElementById('resultadoEstado');
+            resultadoEstado.textContent = 'Desaprobado'; // Mostrar el mensaje de desaprobado
+            resultadoEstado.style.color = 'red'; // Cambiar el color del mensaje a rojo
+			resultadoEstado.style.fontSize = '50px'; // Cambiar el tamaño de fuente a 50px
+
+        }
+
+        // Asignar colores de fondo dependiendo del nivel
+        var niveles = document.querySelectorAll(".level");
+        niveles.forEach(function (nivel) {
+            var textoNivel = nivel.textContent.trim();
+            var infoDiv = nivel.parentElement;
+            switch (textoNivel) {
+                case "Nivel 1":
+                    infoDiv.classList.add("nivel-color-1");
+                    break;
+                case "Nivel 2":
+                    infoDiv.classList.add("nivel-color-2");
+                    break;
+                case "Nivel 3":
+                    infoDiv.classList.add("nivel-color-3");
+                    break;
+                case "Nivel 4":
+                    infoDiv.classList.add("nivel-color-4");
+                    break;
+                default:
+                    break;
+            }
+        });
+    </script>
+</body>
+</html>

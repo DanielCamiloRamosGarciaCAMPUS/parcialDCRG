@@ -1,0 +1,137 @@
+ /* Estilos generales */
+        body {
+              font-family: "Exo 2", sans-serif;
+			  font-weight: 535;
+		  font-style: normal;
+            background-color: #f7f9fc;
+            color: #333;
+            padding-top: 20px;
+        }
+
+        /* Estilos del navbar */
+        nav {
+            background: linear-gradient(90deg, #007bff, #5cb85c);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+              .btn-back {
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background-color: #0056b3;
+        }
+
+        .navbar-brand img {
+            width: 150px;
+            height: auto;
+        }
+
+        .navbar-title h1 {
+            color: #fff;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .btn-logout {
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: transparent;
+            border: 2px solid white;
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .btn-logout:hover {
+            background-color: #fff;
+            color: #007bff;
+            border-color: #007bff;
+        }
+
+        /* Contenedor y tabla de resultados */
+        .container-fluid {
+            margin-top: 30px;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .title-center {
+            font-size: 30px;
+            font-weight: bold;
+            color:#0e84e7;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .info {
+            padding: 20px;
+            border-radius: 15px;
+            background-color:#eaf8fb;
+            margin-bottom: 30px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .info:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Colores dependiendo del nivel */
+        .nivel-color-1 {
+            background-color: #d1e7dd;
+        }
+
+        .nivel-color-2 {
+            background-color: #fff3cd;
+        }
+
+        .nivel-color-3 {
+            background-color: #f8d7da;
+        }
+
+        .nivel-color-4 {
+            background-color: #cfe2ff;
+        }
+
+        .divider {
+            border-top: 2px solid #f3f3f3;
+            margin: 15px 0;
+        }
+
+        .info h3 {
+            font-size: 20px;
+            color:#120df1;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .info p {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+            text-align: center;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .row>[class*='col-'] {
+                margin-bottom: 20px;
+            }
+        }
