@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Icfes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/a/a2/Icfes_logo_2022.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="static/css/index.css" th:href="@{/css/index.css}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,535;1,535&family=Fjalla+One&family=Signika:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Nav -->
+    <nav>
+        <div class="nav-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Icfes_Colombia_logo.svg/640px-Icfes_Colombia_logo.svg.png"
+                alt="Logo" class="nav-icon" style="width: 150px;" /> <!-- Imagen en lugar del icono -->
+        </div>
+        <div class="nav-links">
+            <img src="https://www.copnia.gov.co/sites/default/files/inline-images/articles-76053_logo.png" alt="Logo"
+                class="nav-icon" style="width: 150px;" /> <!-- Imagen en lugar del icono -->
+        </div>
+    </nav>
+    <!-- Contenido principal -->
+    <div class="container">
+        <div class="title">
+            <h1>Bienvenido Escoga Su Usuario</h1>
+            <h1>Pruebas Saber Pro y TyT</h1>
+        </div>
+        <div class="btn-container">
+            <div class="btn-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/1876/1876759.png" alt="Coordinador">
+                <a th:href="@{coordinador/login}" class="btn btn-warning btn-lg btn-large">Coordinador</a>
+            </div>
+            <div class="btn-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/257/257651.png" alt="Estudiante">
+                <a th:href="@{estudiante/login}" class="btn btn-warning btn-lg btn-large">Estudiante</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

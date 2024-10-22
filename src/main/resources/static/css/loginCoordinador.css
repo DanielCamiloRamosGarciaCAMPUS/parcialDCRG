@@ -1,0 +1,156 @@
+/* Estilos generales */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://educateparaelsaber.edu.co/wp-content/uploads/elementor/thumbs/Fondo-Banner-PreIcfes-p1yqc5jgs3gkatl5enqczlyg8a4z6czzjwutbjasxs.jpg');
+            background-size: cover;
+            background-position: center;
+              font-family: "Exo 2", sans-serif;
+			  font-weight: 535;
+		  font-style: normal;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 15px 30px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            z-index: 1000;
+        }
+
+        nav .nav-logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        nav .nav-logo i {
+            margin-right: 10px;
+            font-size: 1.75rem;
+        }
+
+        nav .nav-links {
+            margin-left: auto;
+        }
+
+        nav .nav-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        nav .nav-links a:hover {
+            color: #ffeb3b;
+        }
+
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-size: 1rem;
+            color: #666;
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px;
+            border: 2px solid #333333;
+            border-radius: 10px;
+            font-size: 1rem;
+            color: #333;
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            background-color: #333333;
+            border: none;
+            color: white;
+            padding: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e65100;
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        a.btn-custom {
+            background-color: #333333;
+            color: white;
+            padding: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        a.btn-custom:hover {
+            background-color: #e65100;
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .error-message {
+            color: #dc3545;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        /* Media queries para dispositivos móviles */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 20px;
+                width: 90%;
+            }
+
+            input[type="text"],
+            input[type="password"] {
+                font-size: 0.9rem;
+            }
+
+            input[type="submit"] {
+                font-size: 1rem;
+                padding: 8px;
+            }
+        }

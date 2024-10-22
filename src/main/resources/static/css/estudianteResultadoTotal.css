@@ -1,0 +1,154 @@
+body {
+              font-family: "Exo 2", sans-serif;
+			  font-weight: 535;
+		  font-style: normal;
+           background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            padding: 15px 30px;
+            color: white;
+        }
+
+        nav .navbar-brand img {
+            max-width: 150px;
+            margin-left: 20px;
+        }
+
+        nav h1 {
+            color: white;
+            font-size: 1.6rem;
+        }
+
+        nav .navbar-toggler {
+            border-color: white;
+        }
+
+        nav .navbar-toggler-icon {
+            background-image: none;
+        }
+
+        /* Diseño principal */
+        .container-fluid {
+            padding: 60px 20px;
+        }
+
+		
+
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(90vh - 150px);
+        }
+
+        .result-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .result-card h2 {
+            font-size: 2rem;
+            color: #1e2a38;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .result-card .info {
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .result-card .puntaje {
+            background-color: #eef3f9;
+            font-size: 1.8rem;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            color: #1e2a38;
+        }
+
+        .nivel-color-1 {
+            background-color: #ff6b6b;
+            color: white;
+        }
+
+        .nivel-color-2 {
+            background-color: #ffa502;
+            color: white;
+        }
+
+        .nivel-color-3 {
+            background-color: #1e90ff;
+            color: white;
+        }
+
+        .nivel-color-4 {
+            background-color: #2ed573;
+            color: white;
+        }
+
+        .divider {
+            width: 50px;
+            height: 3px;
+            background-color: #e0e0e0;
+            margin: 20px auto;
+        }
+
+        /* Estilos del footer */
+        footer {
+            background-color: #1e2a38;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        /* Media Queries para pantallas más pequeñas */
+        @media (max-width: 768px) {
+            .result-card {
+                padding: 20px;
+            }
+
+            nav h1 {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            nav h1 {
+                font-size: 1rem;
+            }
+
+            .result-card h2 {
+                font-size: 1.5rem;
+            }
+
+            .result-card .puntaje {
+                font-size: 1.5rem;
+            }
+        }
+        
+            .btn-back {
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background-color: #0056b3;
+        }

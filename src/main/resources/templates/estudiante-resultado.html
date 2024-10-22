@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Resultado Unico</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/a/a2/Icfes_logo_2022.png" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="static/css/estudianteResultado.css"
+		     th:href="@{/css/estudianteResultado.css}">
+			 <link rel="preconnect" href="https://fonts.googleapis.com">
+			 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			 <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,535;1,535&family=Fjalla+One&family=Signika:wght@300..700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark">
+	        <a class="navbar-brand" th:href="@{/estudiante/index}">
+	            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Icfes_Colombia_logo.svg/640px-Icfes_Colombia_logo.svg.png" alt="Logo" style="width: 150spx;">
+	        </a>
+			
+			
+			
+
+	    </nav>
+
+    <div class="container-fluid">
+        <div class="centered-container">
+            <h2 class="title-center">Resultados por Área</h2>
+			<a th:href="@{/estudiante/index}" class="btn btn-back">Atrás</a>
+			
+			
+
+            <!-- Fila 1 -->
+            <div class="row justify-content-center">
+                <div class="col-md-5">
+                    <div class="info ">
+                        <h3>Inglés</h3>
+                        <div class="divider"></div>
+                        <h3>Nivel</h3>
+                        <p th:text="${inglesLevel}"></p>
+                        <div class="divider"></div>
+                        <h3>Puntaje</h3>
+                        <p th:text="${ingles}"></p>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="info ">
+                        <h3>Comunicación Escrita</h3>
+                        <div class="divider"></div>
+                        <h3>Nivel</h3>
+                        <p th:text="${comunicacionLevel}"></p>
+                        <div class="divider"></div>
+                        <h3>Puntaje</h3>
+                        <p th:text="${comunicacion}"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fila 2 -->
+            <div class="row justify-content-center">
+                <div class="col-md-5">
+                    <div class="info ">
+                        <h3>Razonamiento Cuantitativo</h3>
+                        <div class="divider"></div>
+                        <h3>Nivel</h3>
+                        <p th:text="${razonamientoLevel}"></p>
+                        <div class="divider"></div>
+                        <h3>Puntaje</h3>
+                        <p th:text="${razonamiento}"></p>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="info ">
+                        <h3>Lectura Crítica</h3>
+                        <div class="divider"></div>
+                        <h3>Nivel</h3>
+                        <p th:text="${lecturaLevel}"></p>
+                        <div class="divider"></div>
+                        <h3>Puntaje</h3>
+                        <p th:text="${lectura}"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fila 3 -->
+            <div class="row justify-content-center">
+                <div class="col-md-5">
+                    <div class="info ">
+                        <h3>Competencias Ciudadanas</h3>
+                        <div class="divider"></div>
+                        <h3>Nivel</h3>
+                        <p th:text="${competenciasLevel}"></p>
+                        <div class="divider"></div>
+                        <h3>Puntaje</h3>
+                        <p th:text="${competencias}"></p>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="info ">
+                        <h3>Formulación de Proyectos de Ingeniería</h3>
+                        <div class="divider"></div>
+                        <h3>Nivel</h3>
+                        <p th:text="${formulacionLevel}"></p>
+                        <div class="divider"></div>
+                        <h3>Puntaje</h3>
+                        <p th:text="${formulacion}"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fila 4 -->
+            <div class="row justify-content-center">
+                <div class="col-md-5">
+                    <div class="info ">
+                        <h3>Pensamiento Científico</h3>
+                        <div class="divider"></div>
+                        <h3>Nivel</h3>
+                        <p th:text="${pensamientoLevel}"></p>
+                        <div class="divider"></div>
+                        <h3>Puntaje</h3>
+                        <p th:text="${pensamiento}"></p>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="info ">
+                        <h3>Diseño de Software</h3>
+                        <div class="divider"></div>
+                        <h3>Nivel</h3>
+                        <p th:text="${DisenoLevel}"></p>
+                        <div class="divider"></div>
+                        <h3>Puntaje</h3>
+                        <p th:text="${Diseno}"></p>
+                    </div>
+                </div>
+            </div>
+								</div>
+        </div>
+    </div>
+	<!-- jQuery y Popper.js necesarios para Bootstrap -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<!-- Script para asignar colores de fondo dependiendo del nivel -->
+	<script>
+		// Selecciona todos los elementos con la clase "level" y obtiene su texto
+		var niveles = document.querySelectorAll(".level");
+		niveles.forEach(function (nivel) {
+			var textoNivel = nivel.textContent.trim();
+			var infoDiv = nivel.parentElement.parentElement; // Obtener el div padre de "level"
+			switch (textoNivel) {
+				case "Nivel 1":
+					infoDiv.querySelector(".info").classList.add("nivel-color-1");
+					break;
+				case "Nivel 2":
+					infoDiv.querySelector(".info").classList.add("nivel-color-2");
+					break;
+				case "Nivel 3":
+					infoDiv.querySelector(".info").classList.add("nivel-color-3");
+					break;
+				case "Nivel 4":
+					infoDiv.querySelector(".info").classList.add("nivel-color-4");
+					break;
+				default:
+					break;
+			}
+		});
+	</script>
+
+</body>
+
+</html>
